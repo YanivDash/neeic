@@ -1,0 +1,181 @@
+.about_container {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  background-color: #8bc6ec;
+  background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+  padding: 2rem;
+  color: white;
+}
+.about_container .about_heading {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 2.5em;
+}
+.about_container .about_heading h1 {
+  margin: 0;
+  padding: 20px;
+}
+.about_container .about_grid {
+  display: grid;
+  grid-template-columns: [col-start] 1fr [col-2] 1fr [col-3] 1fr [col-4] 1fr [col-end];
+  grid-template-rows: repeat(2, 300px);
+  gap: 10px;
+}
+.about_container .about_grid .about_item {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.about_container .about_grid .item_text {
+  margin-top: 5px;
+  padding-left: 10px;
+}
+.about_container .about_grid h2 {
+  font-size: 3em;
+}
+.about_container .about_grid .about_grid_one {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.about_container .about_grid .about_grid_one img {
+  width: 100%;
+}
+.about_container .about_grid .about_grid_two {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+.about_container .about_grid .about_grid_two h2 {
+  font-size: 2em;
+}
+.about_container .about_grid .about_grid_two img {
+  margin-right: 1em;
+  width: 50%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about_container .about_grid .about_grid_three {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+.about_container .about_grid .about_grid_three h2 {
+  font-size: 2.5em;
+}
+.about_container .about_grid .about_grid_three img {
+  margin-right: 1em;
+  width: 50%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 1200px) {
+  .about_container .about_grid .about_grid_two {
+    display: block;
+  }
+  .about_container .about_grid .about_grid_two h2 {
+    margin: 0;
+  }
+  .about_container .about_grid .about_grid_two p {
+    margin-top: 0;
+  }
+  .about_container .about_grid .about_grid_two img {
+    width: 100%;
+    height: 50%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .about_container .about_grid .about_grid_three {
+    display: block;
+  }
+  .about_container .about_grid .about_grid_three h2 {
+    margin: 0;
+  }
+  .about_container .about_grid .about_grid_three p {
+    margin-top: 5px;
+  }
+  .about_container .about_grid .about_grid_three img {
+    width: 100%;
+    height: 50%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+@media screen and (max-width: 600px) {
+  .about_container .about_grid .about_grid_one {
+    grid-row: 1/2;
+    grid-column: 1/5;
+    padding: 20px;
+  }
+  .about_container .about_grid .about_grid_one h2 {
+    font-size: 2.7em;
+    line-height: 20px;
+    margin: 0;
+  }
+  .about_container .about_grid .about_grid_one p {
+    font-size: 1.2em;
+    margin-top: 5px;
+  }
+  .about_container .about_grid .about_grid_one img {
+    width: 100%;
+    height: 60%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .about_container .about_grid .about_grid_two {
+    padding: 20px;
+    grid-row: 2/3;
+    grid-column: 1/5;
+  }
+  .about_container .about_grid .about_grid_two h2 {
+    font-size: 2.7em;
+    line-height: 20px;
+    margin: 0;
+  }
+  .about_container .about_grid .about_grid_two p {
+    font-size: 1.2em;
+    margin-top: 5px;
+  }
+  .about_container .about_grid .about_grid_two img {
+    height: 60%;
+  }
+  .about_container .about_grid .about_grid_three {
+    padding: 20px;
+    grid-row: 3/4;
+    grid-column: 1/5;
+  }
+  .about_container .about_grid .about_grid_three h2 {
+    font-size: 2.7em;
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+  .about_container .about_grid .about_grid_three p {
+    font-size: 1.2em;
+    margin-top: 0;
+  }
+  .about_container .about_grid .about_grid_three img {
+    height: 60%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .about_container .about_grid p {
+    display: none;
+  }
+  .about_container .about_grid h1 {
+    font-size: 4em;
+  }
+}/*# sourceMappingURL=about.css.map */

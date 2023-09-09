@@ -1,0 +1,95 @@
+.review_container {
+  display: flex;
+  flex-direction: column;
+  background-color: #9ba4b5;
+  font-size: 1rem;
+
+  .testimonials {
+    background-color: #f1f6f9;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    p {
+      font-size: 2em;
+    }
+    h1 {
+      font-weight: 800;
+      font-size: 6em;
+      margin-top: 0;
+    }
+  }
+  .review_card_container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -70px;
+    z-index: 1;
+    .review_card {
+      border-radius: 20px;
+      color: white;
+      width: 400px;
+      min-width: 400px;
+      background-color: #212a3e;
+      margin: 20px;
+      display: flex;
+      flex-direction: column;
+      padding-left: 20px;
+      padding-right: 10px;
+      transition: all 0.3s;
+      &:hover {
+        scale: 1.05;
+      }
+
+      .review_quote {
+        font-size: 100px;
+        line-height: 0;
+        margin-bottom: 0;
+      }
+      .review_test {
+        padding-left: 15px;
+        p {
+          font-size: 2em;
+        }
+        .review_data {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-bottom: 10px;
+          .review_data_text {
+            display: flex;
+            flex-direction: column;
+
+            p {
+              font-size: 18px;
+              padding: 3px;
+              margin: 0;
+              color: rgba(255, 255, 255, 0.7);
+            }
+          }
+
+          img {
+            border-radius: 50%;
+            width: 70px;
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 980px) {
+    .review_card_container {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .review_card_container {
+      display: flex;
+      flex-wrap: wrap;
+      overflow-x: none;
+      .review_card {
+        min-width: 0;
+      }
+    }
+  }
+}

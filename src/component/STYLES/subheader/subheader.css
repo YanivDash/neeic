@@ -1,0 +1,29 @@
+.subheader {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  font-size: 1rem;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f3fde8;
+  padding: 4px 0 4px 0;
+}
+.subheader .subheader_texts {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.5em;
+}
+.subheader .subheader_texts:hover {
+  color: red;
+  cursor: pointer;
+}
+.subheader .subheader_texts .subheader-icons {
+  font-size: 1.7em;
+}
+.subheader .subheader_texts span {
+  padding: 0;
+  margin: 0;
+  margin-left: 10px;
+}/*# sourceMappingURL=subheader.css.map */
