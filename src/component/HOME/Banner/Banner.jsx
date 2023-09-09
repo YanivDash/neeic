@@ -1,5 +1,4 @@
-import { motion, useInView, AnimatePresence } from "framer-motion";
-import { useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   banner,
   service0,
@@ -13,24 +12,20 @@ import { fadeIn } from "../../../utils/motion";
 const Banner = () => {
   const carouseData = [service0, service1, service2, service3];
 
-  const ref = useRef(null);
-  const isInView = useInView(ref);
   return (
     <motion.div className='banner_container'>
       <motion.div className='banner_image'>
         <img src={banner} alt='' />
       </motion.div>
       <div className='darkenBanner'></div>
-      <motion.div
-        variants={fadeIn("", "spring", 1 * 0.5, 0.75)}
-        className='banner_header'
-      >
+      <motion.div className='banner_header'>
         <motion.div
           initial={{ opacity: 0, x: "-100px" }}
           whileInView={{
             opacity: 1,
             x: 0,
           }}
+          viewport={{ once: true }}
           transition={{
             type: "spring",
             delay: 0.2,
@@ -65,7 +60,6 @@ const Banner = () => {
                   animate={{
                     y: "-280%",
                   }}
-                  ref={ref}
                   transition={{
                     duration: 50,
                     type: "tween",

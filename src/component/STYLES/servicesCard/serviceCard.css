@@ -4,10 +4,10 @@
   flex-direction: column;
   font-size: 1rem;
   color: white;
-  background-color: #ffffdd;
+  background-color: #c9d6df;
 }
 .service_card_container .service_card_heading {
-  background-color: #016a70;
+  background-color: #52616b;
   font-size: 2.5em;
 }
 .service_card_container .service_card_heading h1 {
@@ -23,8 +23,8 @@
 }
 .service_card_container .service_card .service_card_item {
   position: relative;
-  width: 200px;
-  height: 250px;
+  width: 15em;
+  height: 20em;
   margin: 12px;
   background-color: black;
   display: flex;

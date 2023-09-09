@@ -1,11 +1,14 @@
 .navbar-container {
-  position: absolute;
+  transition: all ease-in 0.5s;
+  position: fixed;
   z-index: 6;
   width: 100%;
   max-width: 1550px;
-  color: white;
+  color: rgba(255, 255, 255, 0.9);
+
   .navbar {
     display: flex;
+    position: absolute;
     background-color: transparent;
 
     justify-content: space-between;
@@ -16,9 +19,10 @@
     .navbar-logo {
       margin-left: 2.5em;
       display: flex;
+      padding: 5px;
       align-items: center;
       img {
-        width: 120px;
+        width: 7em;
       }
     }
 
@@ -35,7 +39,7 @@
           display: flex;
           align-items: center;
           &:hover {
-            color: black;
+            color: white;
             cursor: pointer;
           }
 
@@ -71,7 +75,7 @@
       #menu-left {
         transform: rotate(180deg);
         transition: all 0.3s ease-in-out;
-        color: black;
+        color: white;
         cursor: pointer;
       }
       #menu-right {
@@ -87,24 +91,30 @@
       }
     }
   }
-
+  .navbar_sticky {
+    background-color: black;
+    transition: all ease-in-out 0.4s;
+    padding: 10px 0 10px 0;
+    position: fixed;
+    top: 0;
+  }
+  .navbar-mobile-show {
+    display: flex;
+    background-color: black;
+    height: 100vh;
+    transform: translateX(0%);
+    transition: all 0.3s ease-in-out;
+  }
+  .navbar-mobile-hide {
+    display: flex;
+    background-color: black;
+    height: 100vh;
+    transform: translateX(-200%);
+    transition: all 0.5s ease-in-out;
+  }
   .mobile-nav {
     position: absolute;
-    width: 100%;
-    .navbar-mobile-show {
-      display: flex;
-      background-color: black;
-      height: 100vh;
-      transform: translateX(0%);
-      transition: all 0.3s ease-in-out;
-    }
-    .navbar-mobile-hide {
-      display: flex;
-      background-color: black;
-      height: 100vh;
-      transform: translateX(-100%);
-      transition: all 0.5s ease-in-out;
-    }
+    width: 80%;
 
     @media screen and (max-width: 600px) {
       .navbar-mobile-show {
@@ -112,22 +122,26 @@
       }
     }
     .navbar-mobile-links {
-      width: 90%;
       color: rgb(215, 215, 215);
       font-size: 3rem;
       margin-bottom: 1000px;
       justify-content: flex-start;
+
       padding: 0;
       margin-left: 25px;
-
+      width: 90%;
       li {
-        padding: 10px 0 20px 5px;
+        padding: 10px;
         cursor: pointer;
         display: flex;
+
         align-items: center;
-        margin-bottom: 20px;
+        margin: 20px;
+        border: 2px solid transparent;
         &:hover {
           color: white;
+          background-color: grey;
+          border-radius: 10px;
           border: 2px solid white;
         }
         .navbar-icon {

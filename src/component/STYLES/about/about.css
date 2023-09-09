@@ -2,14 +2,13 @@
   display: flex;
   flex-direction: column;
   font-size: 1rem;
-  background-color: #8bc6ec;
-  background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+  background-color: #1b262c;
   padding: 2rem;
   color: white;
 }
 .about_container .about_heading {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: #2b2e4a;
   color: white;
   font-size: 2.5em;
 }
@@ -119,6 +118,7 @@
     grid-row: 1/2;
     grid-column: 1/5;
     padding: 20px;
+    overflow: hidden;
   }
   .about_container .about_grid .about_grid_one h2 {
     font-size: 2.7em;
@@ -126,7 +126,7 @@
     margin: 0;
   }
   .about_container .about_grid .about_grid_one p {
-    font-size: 1.2em;
+    font-size: 1.5em;
     margin-top: 5px;
   }
   .about_container .about_grid .about_grid_one img {
@@ -146,7 +146,7 @@
     margin: 0;
   }
   .about_container .about_grid .about_grid_two p {
-    font-size: 1.2em;
+    font-size: 1.5em;
     margin-top: 5px;
   }
   .about_container .about_grid .about_grid_two img {
@@ -163,18 +163,20 @@
     margin-bottom: 10px;
   }
   .about_container .about_grid .about_grid_three p {
-    font-size: 1.2em;
+    font-size: 1.5em;
     margin-top: 0;
   }
   .about_container .about_grid .about_grid_three img {
     height: 60%;
   }
 }
+@media screen and (max-width: 500px) {
+  .about_container .about_grid {
+    grid-template-rows: repeat(2, 450px);
+  }
+}
 
 @media screen and (max-width: 400px) {
-  .about_container .about_grid p {
-    display: none;
-  }
   .about_container .about_grid h1 {
     font-size: 4em;
   }

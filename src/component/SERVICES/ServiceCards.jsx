@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { delay, motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import "../STYLES/servicesCard/serviceCard.css";
 
 const ServiceCards = () => {
@@ -33,12 +34,21 @@ const ServiceCards = () => {
   return (
     <motion.div className='service_card_container'>
       <motion.div className='service_card_heading'>
-        <h1>Services</h1>
+        <Link to='/services'>
+          <h1>Services</h1>{" "}
+        </Link>
       </motion.div>
 
       <div className='service_card'>
         {data.map((item, index) => (
-          <motion.div className='service_card_item' key={index}>
+          <motion.div
+            initial={{ opacity: 0, x: "-100px" }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: index * 0.2, duration: 0.5 }}
+            viewport={{ once: true }}
+            className='service_card_item'
+            key={index}
+          >
             <img src={item.imageSrc} alt='' />
 
             <h3>{item.title}</h3>

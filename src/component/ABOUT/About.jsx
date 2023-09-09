@@ -1,10 +1,9 @@
-import React from "react";
 import { motion } from "framer-motion";
 import "../STYLES/about/about.css";
 
 const About = () => {
   return (
-    <motion.div className='about_container'>
+    <motion.div id='about' className='about_container'>
       <motion.div className='about_heading'>
         <h1>ABOUT US</h1>
       </motion.div>

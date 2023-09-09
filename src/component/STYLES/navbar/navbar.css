@@ -1,12 +1,14 @@
 .navbar-container {
-  position: absolute;
+  transition: all ease-in 0.5s;
+  position: fixed;
   z-index: 6;
   width: 100%;
   max-width: 1550px;
-  color: white;
+  color: rgba(255, 255, 255, 0.9);
 }
 .navbar-container .navbar {
   display: flex;
+  position: absolute;
   background-color: transparent;
   justify-content: space-between;
   align-items: center;
@@ -17,10 +19,11 @@
 .navbar-container .navbar .navbar-logo {
   margin-left: 2.5em;
   display: flex;
+  padding: 5px;
   align-items: center;
 }
 .navbar-container .navbar .navbar-logo img {
-  width: 120px;
+  width: 7em;
 }
 .navbar-container .navbar .navbar-right {
   width: 55%;
@@ -36,7 +39,7 @@
   align-items: center;
 }
 .navbar-container .navbar .navbar-right .navbar-right-links li:hover {
-  color: black;
+  color: white;
   cursor: pointer;
 }
 .navbar-container .navbar .navbar-right .navbar-right-links li .navbar-icon {
@@ -65,7 +68,7 @@
 .navbar-container .navbar .navbar-mobile #menu-left {
   transform: rotate(180deg);
   transition: all 0.3s ease-in-out;
-  color: black;
+  color: white;
   cursor: pointer;
 }
 .navbar-container .navbar .navbar-mobile #menu-right {
@@ -78,23 +81,30 @@
     display: flex;
   }
 }
-.navbar-container .mobile-nav {
-  position: absolute;
-  width: 100%;
+.navbar-container .navbar_sticky {
+  background-color: black;
+  transition: all ease-in-out 0.4s;
+  padding: 10px 0 10px 0;
+  position: fixed;
+  top: 0;
 }
-.navbar-container .mobile-nav .navbar-mobile-show {
+.navbar-container .navbar-mobile-show {
   display: flex;
   background-color: black;
   height: 100vh;
   transform: translateX(0%);
   transition: all 0.3s ease-in-out;
 }
-.navbar-container .mobile-nav .navbar-mobile-hide {
+.navbar-container .navbar-mobile-hide {
   display: flex;
   background-color: black;
   height: 100vh;
-  transform: translateX(-100%);
+  transform: translateX(-200%);
   transition: all 0.5s ease-in-out;
+}
+.navbar-container .mobile-nav {
+  position: absolute;
+  width: 80%;
 }
 @media screen and (max-width: 600px) {
   .navbar-container .mobile-nav .navbar-mobile-show {
@@ -102,23 +112,26 @@
   }
 }
 .navbar-container .mobile-nav .navbar-mobile-links {
-  width: 90%;
   color: rgb(215, 215, 215);
   font-size: 3rem;
   margin-bottom: 1000px;
   justify-content: flex-start;
   padding: 0;
   margin-left: 25px;
+  width: 90%;
 }
 .navbar-container .mobile-nav .navbar-mobile-links li {
-  padding: 10px 0 20px 5px;
+  padding: 10px;
   cursor: pointer;
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin: 20px;
+  border: 2px solid transparent;
 }
 .navbar-container .mobile-nav .navbar-mobile-links li:hover {
   color: white;
+  background-color: grey;
+  border-radius: 10px;
   border: 2px solid white;
 }
 .navbar-container .mobile-nav .navbar-mobile-links li .navbar-icon {

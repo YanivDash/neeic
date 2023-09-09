@@ -1,6 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import { Home, Services, Navbar, SubHeader, Contact } from "./component";
+import {
+  Home,
+  Services,
+  Navbar,
+  SubHeader,
+  Contact,
+  Footer,
+} from "./component";
 
 function App() {
   return (
@@ -12,6 +19,7 @@ function App() {
         <Route exact path='/services' element={<Services />} />
       </Routes>
       <Contact />
+      <Footer />
     </BrowserRouter>
   );
 }

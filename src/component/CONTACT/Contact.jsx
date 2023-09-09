@@ -61,7 +61,7 @@ const Contact = () => {
   };
 
   return (
-    <div>
+    <div id='contact'>
       <motion.div className='contact_container'>
         <div className='contact_header'>
           <p>Get in touch</p>

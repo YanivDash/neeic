@@ -1,15 +1,16 @@
 import { useState } from "react";
 import "../STYLES/navbar/navbar.css";
 import Logo from "../../assets/logo.svg";
-import { motion, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 import { IoMdContact } from "react-icons/io";
 import { RiReservedFill } from "react-icons/ri";
-import { BiSolidInfoCircle } from "react-icons/bi";
+
+import { AiTwotoneHome } from "react-icons/ai";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
-  const { scrollY } = useScroll();
 
   function disableScrolling() {
     document.body.style.overflow = "hidden";
@@ -18,6 +19,12 @@ const Navbar = () => {
   function enableScrolling() {
     document.body.style.overflow = "visible";
   }
+
+  window.addEventListener("scroll", () => {
+    var navbar = document.querySelector(".navbar");
+    navbar.classList.toggle("navbar_sticky", window.scrollY > 50);
+    navbar.classList.toggle("navbar_absolute", window.scrollY < 50);
+  });
 
   if (menu) {
     disableScrolling();
@@ -32,17 +39,29 @@ const Navbar = () => {
         </div>
         <div className='navbar-right'>
           <ul className='navbar-right-links'>
-            <li className='navbar-link-item'>
-              <RiReservedFill className='navbar-icon' />
-              <span>Services</span>
-            </li>
-            <li className='navbar-link-item'>
-              <BiSolidInfoCircle className='navbar-icon' />{" "}
-              <span>About us</span>
-            </li>
-            <li className='navbar-link-item'>
-              <IoMdContact className='navbar-icon' /> <span>Contact-us</span>
-            </li>
+            <Link to='/'>
+              <li
+                className='navbar-link-item'
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                <AiTwotoneHome className='navbar-icon' /> <span>Home</span>
+              </li>
+            </Link>
+            <Link to='/services'>
+              <li
+                className='navbar-link-item'
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                <RiReservedFill className='navbar-icon' />
+
+                <span>Services</span>
+              </li>
+            </Link>
+            <a href='#contact'>
+              <li className='navbar-link-item'>
+                <IoMdContact className='navbar-icon' /> <span>Contact-us</span>
+              </li>
+            </a>
           </ul>
         </div>
         <div className='navbar-mobile'>
@@ -53,24 +72,48 @@ const Navbar = () => {
           />
         </div>
       </div>
-      <div className='mobile-nav'>
-        <div
-          className={`${menu ? "navbar-mobile-show" : "navbar-mobile-hide"}`}
-        >
-          <ul className='navbar-mobile-links'>
-            <li className='navbar-link-item'>
+      <div
+        className={`${
+          menu
+            ? "navbar-mobile-show mobile-nav"
+            : "mobile-nav navbar-mobile-hide "
+        }`}
+      >
+        <ul className='navbar-mobile-links'>
+          <Link to='/'>
+            <li
+              className='navbar-link-item'
+              onClick={() => {
+                window.scrollTo(0, 0);
+                setMenu(false);
+              }}
+            >
+              <AiTwotoneHome className='navbar-icon' /> <span>Home</span>
+            </li>
+          </Link>
+          <Link to='/services'>
+            <li
+              className='navbar-link-item'
+              onClick={() => {
+                window.scrollTo(0, 0);
+                setMenu(false);
+              }}
+            >
               <RiReservedFill className='navbar-icon' />
               <span>Services</span>
             </li>
-            <li className='navbar-link-item'>
-              <BiSolidInfoCircle className='navbar-icon' />{" "}
-              <span>About us</span>
-            </li>
+          </Link>
+          <a
+            href='#contact'
+            onClick={() => {
+              setMenu(false);
+            }}
+          >
             <li className='navbar-link-item'>
               <IoMdContact className='navbar-icon' /> <span>Contact-us</span>
             </li>
-          </ul>
-        </div>
+          </a>
+        </ul>
       </div>
     </motion.div>
   );

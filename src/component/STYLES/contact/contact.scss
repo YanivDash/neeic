@@ -3,9 +3,8 @@
   flex-direction: column;
   background-color: #393e46;
   padding: 30px;
-
   font-size: 1rem;
-
+  padding-bottom: 90px;
   color: white;
   .contact_header {
     background-color: #222831;
@@ -57,14 +56,27 @@
         color: black;
       }
     }
+
     button {
       font-size: 2em;
 
       margin: auto;
       margin-top: 10px;
       margin-bottom: 20px;
-      width: 300px;
+      width: 200px;
       background-color: #352f44;
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+  .contact_container {
+    padding: 0;
+    .contact_header {
+      border-radius: 0;
+    }
+    .contact_form {
+      padding-top: 5px;
+      border-radius: 0;
     }
   }
 }

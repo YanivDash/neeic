@@ -12,7 +12,7 @@
 .banner_container .darkenBanner {
   display: none;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
   .banner_container .darkenBanner {
     display: block;
     width: 100%;
@@ -40,7 +40,6 @@
 }
 .banner_container .banner_header .banner_text h1 span {
   margin: 0;
-  line-height: 0;
   font-size: 0.1em;
   color: rgb(199, 199, 199);
 }
@@ -60,7 +59,7 @@
   color: black;
   border-radius: 0;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
   .banner_container .banner_header .banner_text {
     position: absolute;
     z-index: 1;
@@ -106,7 +105,7 @@
   width: 100%;
   height: auto;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
   .banner_container .banner_header {
     position: absolute;
     text-align: center;
@@ -124,11 +123,11 @@
   }
 }
 .banner_container .banner_image {
-  max-height: 700px;
+  max-height: 750px;
   overflow: hidden;
 }
 .banner_container .banner_image img {
   width: 100%;
-  min-width: 500px;
+  min-width: 650px;
   height: auto;
 }/*# sourceMappingURL=banner.css.map */
