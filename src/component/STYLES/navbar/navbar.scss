@@ -98,10 +98,16 @@
     position: fixed;
     top: 0;
   }
+  .navbar_absolute {
+    background-color: transparent;
+    transition: all ease-in-out 0.4s;
+    padding: 0;
+  }
   .navbar-mobile-show {
     display: flex;
+
     background-color: black;
-    height: 100vh;
+    height: 105vh;
     transform: translateX(0%);
     transition: all 0.3s ease-in-out;
   }
@@ -115,6 +121,7 @@
   .mobile-nav {
     position: absolute;
     width: 80%;
+    margin-top: -30px;
 
     @media screen and (max-width: 600px) {
       .navbar-mobile-show {

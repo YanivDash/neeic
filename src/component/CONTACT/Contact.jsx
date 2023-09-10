@@ -29,13 +29,13 @@ const Contact = () => {
 
     emailjs
       .send(
-        "L",
-        "v",
+        "service_a3u8mql",
+        "template_tunhejo",
         {
           from_name: form.name,
           to_name: "Vinay",
           from_email: form.email,
-          to_email: "roxys2032@gmail.com",
+          to_email: "vinaylatwal123@gmail.com",
           message: form.message,
         },
         "sWCVfRr5pTNJ4e9nW"
@@ -77,6 +77,7 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder="What's your good name?"
+              required
             />
           </label>
           <label>
@@ -87,6 +88,7 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder="What's your web address?"
+              required
             />
           </label>
           <label>
